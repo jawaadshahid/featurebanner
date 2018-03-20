@@ -1,0 +1,64 @@
+/*! normalize.css v5.0.0 | MIT License | https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css
+modified by Jawaad Shahid
+ */
+button,hr,input{overflow:visible}
+audio,canvas,progress,video{display:inline-block}
+progress,sub,sup{vertical-align:baseline}
+html{height:100%;font-family:inherit;line-height:1.2;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{height:100%;margin:0}
+menu,article,aside,details,footer,header,nav,section{display:block}
+h1,h2,h3,h4,h5{font-weight:normal;font-size:1em;margin:0;}
+figcaption,figure,main{display:block}
+figure{margin:1em 40px}
+hr{box-sizing:content-box;height:0}
+code,kbd,pre,samp{font-family:inherit;font-size:1em}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}
+dfn{font-style:italic}
+mark{background-color:#ff0;color:inherit}
+small{font-size:80%}
+sub,sup{font-size: 0.6em;line-height:0;position:relative}
+sub{bottom:-.25em}
+sup{top:-.5em}
+audio:not([controls]){display:none;height:0}
+img{border-style:none}
+svg:not(:root){overflow:hidden}
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.2;margin:0}
+button,input{}
+button,select{text-transform:none}
+[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
+progress{}
+textarea{overflow:auto}
+[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+summary{display:list-item}
+[hidden],template{display:none}
+
+/*top level or custom reset*/
+*, *:before, *:after{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+*:focus{outline:0;}
+input[type="text"], input[type="tel"], input[type="email"], input[type="search"], input[type="number"], textarea, select, label {display:block;box-sizing:border-box;width:100%;font-family: inherit; font-size: inherit; line-height: inherit; padding: 0.7em 0.5em; border: none; border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.button, button, input[type="submit"] {display: inline-block; margin: 0; padding: 0; color: inherit; background: transparent; border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width: 100%; height: auto; border: 0;}
+svg{display: block; margin: 0;}
+p{margin: 1em 0;}
+ul, li{list-style-type: none; margin-left: 0; margin-right: 0; padding: 0;}
+blockquote{margin: 0;}

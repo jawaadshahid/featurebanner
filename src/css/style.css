@@ -1,0 +1,81 @@
+body {font-family: 'Open Sans', sans-serif; font-size: 16px;}
+
+button, .button, input.button {position: relative; width: 100%; padding: 1em; font-weight: 600; font-size: 0.938em; text-align: center; text-transform: uppercase; cursor: pointer;}
+button.light, .button.light {border: 1px solid #b0d8e6;}
+
+.featurebanner{position: fixed; top: 0; width: 100%; height: 92vh; backface-visibility: hidden;}
+.featurebanner:before{content: ''; display:block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none;
+    background: rgba(42,46,50,0.3);
+    background: radial-gradient(ellipse at center, rgba(42,46,50,0.2) 0%,rgba(42,46,50,0.9) 100%);
+    mix-blend-mode: multiply;
+    transition: opacity 1s;
+    opacity: 1;
+}
+.featurebanner.viewart:before{
+    opacity: 0.7;
+}
+.featurebanner:after {content: ''; display:block; position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 1s; z-index: 99; pointer-events: none; 
+    background: #ffffff url(../images/final_loader.gif) no-repeat center center; background-size: 338px auto;
+}
+.featurebanner.ready:after{opacity: 0;}
+
+.featurebanner .banners{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+.featurebanner .banners .banner{position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1;}
+.featurebanner .banners .banner.currentslide{z-index: 3;}
+.featurebanner .banners .banner.currentslide.animate{transition: opacity 1s; opacity: 0;}
+.featurebanner .banners .banner.nextslide{z-index: 2;}
+.featurebanner .banners .banner img{position: absolute; display: block;top: 50%;left: 50%;transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; height: 100%; width: auto; max-width: none; z-index: 1;}
+.featurebanner .banners .banner img.size-medium {filter: blur(15px);}
+.featurebanner .banners .banner img.fullimg {opacity: 0; transition: opacity 1s; z-index: 2;}
+.featurebanner .banners .banner.fullurlloaded img.fullimg {opacity: 1;}
+
+.featurebanner .navarrows {overflow: visible; display: none; position: relative; top: 50%; left: 0; z-index: 4; transform: translateY(-50%); pointer-events: none; transition: opacity 1s; opacity: 1;}
+.featurebanner.viewart .navarrows {opacity: 0;}
+.featurebanner .navarrows > div {position: absolute; padding: 0.75em 1em; color: #ffffff;pointer-events: auto;cursor: pointer;font-size: 2em;line-height: 0;transform: scaleX(0.5);}
+.featurebanner .navarrows .leftarrow {left: 0;}
+.featurebanner .navarrows .rightarrow {right: 0;}
+
+.featurebanner .pagination {position: absolute; bottom: 30px; width: 100%; font-size: 0; text-align: center; z-index: 3; transition: opacity 1s; opacity: 1; user-select: none;}
+.featurebanner.viewart .pagination {opacity: 0;}
+.featurebanner .pagination .pagdot {display: inline-block; width: 24px; height: 24px; margin-left: 22px; background-color: #ffffff; opacity: 0.3; transition: all 0.2s; cursor: pointer;}
+.featurebanner .pagination .pagdot:first-child {margin-left: 0;}
+.featurebanner .pagination .pagdot.active {transform: scale(1.17); opacity: 1; background-color: #b0d8e6; pointer-events: none;}
+
+.featurebanner .slidecontent {position: absolute; top: 50%; left: 0; width: 100%; z-index: 3; transform: translateY(-50%); text-align: center; color: #ffffff; pointer-events: none;}
+.featurebanner.viewart .slidecontent .svglogo, .featurebanner.viewart .slidecontent .description {opacity: 0;}
+.featurebanner .slidecontent .svglogo {width: 250px; height: 125px; margin: 0 auto; transition: opacity 1s; opacity: 1;}
+.featurebanner .slidecontent .svglogo .st0 {fill: #ffffff;}
+.featurebanner .slidecontent .description {overflow: visible; font-size: 0.938em; font-weight: 300; font-style: italic; letter-spacing: 0.025em; text-shadow: 0px 0px 30px #000000; transition: opacity 1s; opacity: 1;}
+.featurebanner .slidecontent .button {width: auto; margin-top: 2em; padding: 1em 3em 1em 3em; font-size: 0.938em; font-weight: normal; letter-spacing: 0.150em; border-color: #ffffff; background-color: rgba(0,0,0,0); text-shadow: 0px 0px 30px #000000; pointer-events: auto; transition: background-color 1s;}
+.featurebanner .slidecontent .button:hover{background-color: rgba(0,0,0,0.2);}
+
+@media only screen and (min-width : 480px) {
+    .featurebanner{height: 96vh;}
+}
+
+@media only screen and (min-width : 769px) {
+    .featurebanner{height: 100vh;}
+    .featurebanner:before{
+        background: rgba(42,46,50,0.3);
+        background: radial-gradient(100vh at center, rgba(42,46,50,0.2) 0%,rgba(42,46,50,0.9) 100%);
+    }
+    .featurebanner .pagination {bottom: 45px;}
+    .featurebanner .pagination .pagdot {width: 12px; height: 12px; margin-left: 11px;}
+    .featurebanner .pagination .pagdot:hover {transform: scale(1.17); opacity: 0.4;}
+    .featurebanner .navarrows {display: block;}
+    .featurebanner .slidecontent .svglogo {width: 400px; height: 200px;}
+    .featurebanner .slidecontent .description {padding: 0 4em; font-size: 1.250em;}
+    .featurebanner .slidecontent .button {margin-top: 4em;}
+}
+
+@media only screen and (orientation: portrait) and (min-width : 769px) {
+    .featurebanner .banners .banner img{width: auto; height: 100%;}
+}
+@media only screen and (orientation: landscape) and (min-width : 769px) {
+    .featurebanner .banners .banner img{width: auto; height: auto;}
+}
+@media screen and (orientation: landscape) and (max-width: 768px)  {
+    .featurebanner .banners .banner img{width: 100%; height: auto;}
+    .featurebanner .slidecontent .button{margin-top: 0;}
+    .featurebanner .pagination {bottom: 15px;}
+}
