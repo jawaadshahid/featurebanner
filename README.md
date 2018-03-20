@@ -5,4 +5,4 @@ A fully responsive carousel built using jQuery and hammer.js to recognise mobile
 some noteable features of this component are:
 - swipe gesture to navigate slides
 - progressive asset loading
-- full responsive 
+- fully responsive 
